@@ -23,7 +23,7 @@
         PELAGIA: {
             NAME: 'Pelagia',
             GREETING: 'Let us begin our journey...',
-            ORIGIN: 'Greek — meaning "of the sea"'
+            ORIGIN: 'Greek meaning "of the sea"'
         },
         TOTAL_VOICES: 25,
         TOTAL_QUESTIONS: 30,
@@ -855,7 +855,7 @@
 
     function getIdentityOptions() {
         return [
-            { gender: 'male', displayName: 'Alexander', identity: 'Alex' },
+            { gender: 'male', displayName: 'Andrews', identity: 'Alex' },
             { gender: 'female', displayName: 'Alexandra', identity: 'Alexa' },
             { gender: 'other', displayName: 'Taylor', identity: 'Taylor' }
         ];
@@ -1424,7 +1424,7 @@
                 <footer class="app-footer">
                     <div class="footer-content">
                         <p>© 2026 Learn Modern Right</p>
-                        <p class="footer-tech">Built with HTML · CSS · JavaScript · Voice of Pelagia</p>
+                        <p class="footer-tech">Built Demo Purposes · Voice of Pelagia</p>
                         <div class="footer-links">
                             <a href="#">About</a>
                             <a href="#">Privacy</a>
@@ -2025,9 +2025,9 @@
                             <span class="score-label">Your Score</span>
                         </div>
                         <div class="results-feedback">
-                            <p>${state.quizScore >= 25 ? '🌟 Outstanding! You are a true digital scholar.' :
-                                state.quizScore >= 20 ? '📚 Well done! You have a strong understanding.' :
-                                state.quizScore >= 15 ? '📖 Good effort! Review the voices to improve.' :
+                            <p>${state.quizScore >= 25 ? '🌟 Outstanding. You are a true digital scholar.' :
+                                state.quizScore >= 20 ? '📚 Well done. You have a strong understanding.' :
+                                state.quizScore >= 15 ? '📖 Good effort. Review the voices to improve.' :
                                 '🎤 Pelagia suggests revisiting the voices for deeper understanding.'}</p>
                         </div>
                         <button class="action-btn primary" onclick="resetQuiz()">🔄 Retry Quiz</button>
