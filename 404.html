@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Modern Right — Pelagia</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #1E293B;
+            color: #F5F0E8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 240, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            color: #C9A84C;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            color: #E8D5A3;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            opacity: 0.8;
+        }
+        
+        .gold-text {
+            color: #C9A84C;
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 32px;
+            background: #C9A84C;
+            color: #1E293B;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Georgia', serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #E8D5A3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+        }
+        
+        .pelagia {
+            margin-top: 16px;
+            font-style: italic;
+            color: rgba(232, 213, 163, 0.5);
+            font-size: 0.85rem;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(201, 168, 76, 0.15);
+            border-top-color: #C9A84C;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 16px auto 0;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📜</div>
+        <h1>Learn Modern Right</h1>
+        <p><span class="gold-text">Pelagia</span> is preparing the chamber...</p>
+        <p style="font-size: 0.9rem; opacity: 0.6;">Redirecting you to the wisdom within.</p>
+        <div class="spinner"></div>
+        <a href="/" class="btn">🏛️ Enter the Chamber</a>
+        <p class="pelagia">"Let us begin our journey..."</p>
+    </div>
+
+    <script>
+        // Redirect to the main page after a moment
+        setTimeout(function() {
+            // Get the base path
+            const path = window.location.pathname;
+            const basePath = path.replace(/\/[^/]*$/, '') + '/';
+            window.location.replace(basePath + 'index.html');
+        }, 1500);
+    </script>
+</body>
+</html>
