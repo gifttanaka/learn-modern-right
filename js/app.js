@@ -28,7 +28,8 @@
         TOTAL_VOICES: 25,
         TOTAL_QUESTIONS: 30,
         STORAGE_KEY: 'learn_modern_right_data',
-        VOICES_PATH: '/assets/audio/'
+        // FIXED: Use relative path for GitHub Pages
+        VOICES_PATH: './assets/audio/'
     };
 
     // ============================================
@@ -945,7 +946,7 @@
     };
 
     // ============================================
-    // AUDIO MANAGER
+    // AUDIO MANAGER — FIXED FOR GITHUB PAGES
     // ============================================
 
     const AudioManager = {
@@ -957,7 +958,9 @@
             // Stop any current audio
             this.stop();
 
-            const fullPath = CONFIG.VOICES_PATH + filePath;
+            // FIXED: Use the correct path for GitHub Pages
+            // Since app.js is in the root, and audio is in assets/audio/
+            const fullPath = './assets/audio/' + filePath;
             console.log(`🎤 Pelagia speaks: ${fullPath}`);
 
             try {
@@ -970,8 +973,8 @@
                     this.updateUI();
                 });
 
-                this.audio.addEventListener('error', () => {
-                    console.error('❌ Pelagia\'s voice could not be found');
+                this.audio.addEventListener('error', (e) => {
+                    console.error('❌ Pelagia\'s voice could not be found:', e);
                     this.stop();
                     DOM.showToast('Pelagia\'s voice file is not yet ready. Please add the audio files.', 'error');
                     this.updateUI();
@@ -1366,7 +1369,7 @@
                     <div class="header-content">
                         <div class="brand">
                             <div class="brand-icon">
-                                <img src="/assets/images/logo.png" alt="Learn Modern Right Logo" onerror="this.style.display='none'">
+                                <img src="./assets/images/logo.png" alt="Learn Modern Right Logo" onerror="this.style.display='none'">
                             </div>
                             <div>
                                 <h1>Learn Modern Right</h1>
